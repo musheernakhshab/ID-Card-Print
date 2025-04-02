@@ -1,0 +1,153 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5AA1891-1BA8-48C8-A4B2-84701F1E8780}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GlobalSoft</RootNamespace>
+    <AssemblyName>GlobalSoft</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddClass.Designer.cs">
+      <DependentUpon>FrmAddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManager.cs" />
+    <Compile Include="FrmAddCollege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCollege.Designer.cs">
+      <DependentUpon>FrmAddCollege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStudent.Designer.cs">
+      <DependentUpon>FrmAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintStudentID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintStudentID.Designer.cs">
+      <DependentUpon>FrmPrintStudentID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewColleges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewColleges.Designer.cs">
+      <DependentUpon>FrmViewColleges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewStudents.Designer.cs">
+      <DependentUpon>FrmViewStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent_Main.Designer.cs">
+      <DependentUpon>MDIParent_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddClass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCollege.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddCollege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddStudent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintStudentID.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPrintStudentID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewColleges.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmViewColleges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewStudents.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmViewStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
